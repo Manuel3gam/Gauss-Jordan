@@ -1,0 +1,30 @@
+m1 = [[0,3,8],[7,6,9],[4,6,5]]
+print('la matriz original es',m1)
+
+# ri --> rj
+if m1[0][0] == 0:
+    m2 = m1[::-1]
+    print('cambiamos renglones si es necesario...',m2)
+else:
+    m2 = m1
+    print('cambiamos renglones si es necesario...',m2)
+# kri --> ri
+y = 0
+x = 0
+while m2[x][y] == 0:
+    y += 1
+for n in m2:    
+    m3 = n
+    m4 = [n*(1/m2[x][y]) for n in m3]
+    x += 1
+    y = 0
+    print(m4)
+
+# kri + Xrj --> ri
+i1 = len(m1)
+a = m2[i1-1]
+i2 = i1-1
+b = m2[i2-1]
+
+#if __name__=='__main__': 
+    #Gauss_Jordan()
